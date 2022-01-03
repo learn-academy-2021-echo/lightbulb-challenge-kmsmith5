@@ -15,7 +15,7 @@ class Button extends Component{
     }
   }
 //code a function that toggles offOn and bulb using conditionals
-
+// refactor flip function to switch the images of both switch and bulb simultaneously
 flip = () => {
   if (this.state.switchImg === switchOff) {
     this.setState({switchImg: switchOn, bulbImg: bulbOn})
@@ -25,6 +25,7 @@ flip = () => {
 }
 //render a button that when clicked, changes the word and color contained witin using flip function above
 // make the button square shaped in css file
+//chamge from button to image with onclick functionality
 render(){
   return(
     <>
