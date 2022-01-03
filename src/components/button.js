@@ -1,0 +1,38 @@
+import React, { Component } from 'react'
+import bulbOff from "./BulbOff.jpg";
+import bulbOn from './BulbOn.jpg';
+import switchOn from "./SwitchOn.jpg";
+import switchOff from "./SwitchOff.jpg"
+
+class Button extends Component{
+//set up constructor and super, with state object with two keys
+//one key offOn and one key bulb, to show the color of the bulb at the off or on state
+  constructor(props) {
+    super(props);
+    this.state = {
+      switchImg: switchOff,
+      bulbImg: bulbOff,
+    }
+  }
+//code a function that toggles offOn and bulb using conditionals
+
+flip = () => {
+  if (this.state.switchImg === switchOff) {
+    this.setState({switchImg: switchOn, bulbImg: bulbOn})
+  } else {
+    this.setState({switchImg: switchOff, bulbImg: bulbOff})
+  }
+}
+//render a button that when clicked, changes the word and color contained witin using flip function above
+// make the button square shaped in css file
+render(){
+  return(
+    <>
+      <img className= 'switch' src={this.state.switchImg} onClick={this.flip}></img>
+      <img className = 'bulb' src={this.state.bulbImg}></img>
+    </>
+  )
+ }
+}
+
+export default Button

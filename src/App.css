@@ -13,6 +13,21 @@
   }
 }
 
+#Button{
+  height: 50px;
+  width: 50px;
+}
+
+.switch{
+  height: 175px;
+  width: 175px;
+}
+
+.bulb{
+  height: 175px;
+  width: 175px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
