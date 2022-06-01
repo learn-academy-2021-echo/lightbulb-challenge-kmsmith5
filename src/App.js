@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
 import Button from './components/button.js'
-import AddRemove from './components/AddRemove.js'
 
 class App extends Component{
   render(){
@@ -12,6 +11,9 @@ class App extends Component{
       </div>
         <AddRemove />
       <Button />
+
+        <h1>Lightswitch</h1>
+        <Button/>
       </>
     )
   }
