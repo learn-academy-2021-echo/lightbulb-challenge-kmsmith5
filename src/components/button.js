@@ -22,36 +22,20 @@ flip = () => {
     this.setState({switchImg: switchOn, bulbImg: bulbOn})
   } else {
     this.setState({switchImg: switchOff, bulbImg: bulbOff})
-      offOn: 'off',
-      bulb: 'white'
     }
   }
 //code a function that toggles offOn and bulb using conditionals
-
-flip = () => {
-  if (this.state.offOn === 'off') {
-    this.setState({offOn: 'on', bulb: 'yellow'})
-  } else {
-    this.setState({offOn: 'off', bulb: 'white'})
-  }
-}
 //render a button that when clicked, changes the word and color contained witin using flip function above
 // make the button square shaped in css file
 //chamge from button to image with onclick functionality
-render(){
-  return(
-    <>
-      <img className= 'switch' src={this.state.switchImg} onClick={this.flip}></img>
-      <img className = 'bulb' src={this.state.bulbImg}></img>
 
 render(){
   return(
     <>
-      <button
-      id='Button' onClick={this.flip} style={{background: this.state.bulb}}
-      >
-      {this.state.offOn}
-      </button>
+
+      <img className= 'switch' src={this.state.switchImg} onClick={this.flip}></img>
+      <img className = 'bulb' src={this.state.bulbImg}></img>
+
     </>
   )
  }
